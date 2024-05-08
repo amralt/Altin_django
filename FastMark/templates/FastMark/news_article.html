@@ -6,8 +6,18 @@
 {% block content %}
     <div class="row">
         <div class="col-sm">
+            <h4 style="float: right;">author - {{ article.author.name }}</h4>
             <h3>{{ article.title }}</h3>
             <p>{{ article.text }}</p>
         </div>
+    </div>
+
+    <div class="comments">
+        {% for comment in comments %}
+            <div class="comment">
+                <h5>{{comment.author.name}}</h5>
+                <p>{{comment.text}}</p>
+            </div>
+        {% endfor %}
     </div>
 {% endblock %}

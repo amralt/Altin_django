@@ -4,6 +4,7 @@
 
 {% block content %}
     {% if articles %}
+        <p>{{count_articles}} - статей всего </p>
         {% for article in articles %}
             <div class="row">
                 <div class="col-sm">
